@@ -12,11 +12,11 @@ export default function Medium() {
       <>
         <header className=" top-0 flex flex-col justify-between ">
           <div className="flex">
-            <div>
+            <div className="flex-1 ">
               <h1 className="text-3xl font-bold mb-5">
                 Hi there, I'm Oluwaseun
               </h1>
-              <h2 className="text-xl mb-3">Full-stack developer.</h2>
+              <h2 className="text-xl mb-3">Full-stack developer</h2>
             </div>
           </div>
         </header>
