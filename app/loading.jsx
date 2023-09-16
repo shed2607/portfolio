@@ -1,5 +1,4 @@
 import React from 'react';
-import './Loading.css'; // Import the CSS file for styling
 
 
 export default function Loading() {
