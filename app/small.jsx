@@ -11,10 +11,10 @@ export default function Small() {
     <div className="flex flex-col lg:flex-row mx-8">
       <>
         <header className=" top-0 flex  w-1/2 flex-col justify-between ">
-          <div className="flex">
-            <div>
-              <h1 className="text-3xl font-bold mb-5">
-                Hi there, Oluwaseun
+          <div className="flex items-center">
+            <div className="flex-1">
+              <h1 className="text-2xl font-bold mb-5">
+                Hi there, I'm Oluwaseun
               </h1>
               <h2 className="text-xl mb-3">Full-stack developer.</h2>
             </div>
