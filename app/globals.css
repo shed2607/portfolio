@@ -8,7 +8,7 @@ html {
 
 body {
   background-color: #0F1E3E;
-  @apply px-8  md:px-16 sm:px-32; /* Default padding for larger screens */
+  padding-top: 10px;
 }
 
 .content {

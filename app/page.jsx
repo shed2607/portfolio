@@ -1,84 +1,47 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import About from "./about/page";
-import Projects from "./projects/page";
-import Footer from "./components/footer";
-import NavBar from "./components/navbar";
-import Skills from "./skills/page";
-import Me from "./me/page";
-import Experience from "./experience/page";
+import { getScreenSize } from "./functions/screenutils";
+import Small from "./small";
+import Large from "./big";
+import Medium from "./medium";
+import Loading from "./loading";
 
 export default function Home() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [screenSize, setScreenSize] = useState(null); // Initialize with null
+  const [isLoading, setIsLoading] = useState(true); // Initialize with true
 
   useEffect(() => {
+    const initialSize = getScreenSize();
+    setScreenSize(initialSize); // Set the initial screen size
+
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 1015); // Adjust the breakpoint as needed
+      const newSize = getScreenSize();
+      setScreenSize(newSize);
     };
 
-    handleResize(); // Initial check
+    // Add a delay of 3 seconds before turning off the loading screen
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 3 seconds delay
+
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearTimeout(loadingTimeout); // Clear the loading timeout when unmounting
     };
   }, []);
 
-  return (
-    <div className="flex flex-col lg:flex-row">
-      {!isSmallScreen && (
-        <>
-          <header className="sticky top-0 flex max-h-screen w-1/2 flex-col justify-between py-12">
-            <div>
-              <h1 className="text-5xl font-bold mb-5">
-                Hi there, I'm Oluwaseun
-              </h1>
-              <h2 className="text-3xl mb-3">Full-stack developer.</h2>
-              <p>
-                I'm a <span className="special">full-stack developer</span> with
-                a passion for building beautiful user interfaces and scalable
-                backend systems.
-              </p>
-              <NavBar />
-              <Footer />
-            </div>
-          </header>
-          <main className="w-full lg:w-1/2">
-            <Me />
-            <About />
-            <Experience />
-            <Skills />
-            <Projects />
-          </main>
-        </>
-      )}
-      {isSmallScreen && (
-        <>
-          <header className=" top-0 flex  w-1/2 flex-col justify-between py-12">
-            <div className="flex">
-              <div>
-                <h1 className="text-3xl font-bold mb-5">Oluwaseun Adeniyi</h1>
-                <h2 className="text-xl mb-3">Full-stack developer.</h2>
-              </div>
-              <div className="ml-auto">
-                <Footer />
-              </div>
-            </div>
-          </header>
-          <main className="w-full ">
-            <Me />
-            <About />
-            <Experience />
-            <Skills />
-            <Projects />
-          </main>
-          <footer>
-            <p className="my-10">
-              Copyright © 2023 by Oluwaseun Adeniyi. All rights reserved.
-            </p>
-          </footer>
-        </>
-      )}
-    </div>
-  );
+  // Conditionally render based on screen size and loading state
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (screenSize === "large") {
+    return <Large />;
+  } else if (screenSize === "small") {
+    return <Small />;
+  } else {
+    return <Medium />;
+  }
 }
