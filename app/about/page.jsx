@@ -8,7 +8,7 @@ export default function About() {
       <section className="content">
         <h1 className="text-3xl font-bold">.About</h1>
         <p className="p">
-          As a <span className="special">software developer</span>, I specialize in integrating technology to
+          As a freelance <span className="special">software developer</span>, I specialize in integrating technology to
           support startups and established businesses in navigating the dynamic
           tech landscape. My expertise spans mobile and web app development,
           enabling me to create versatile solutions that meet your specific

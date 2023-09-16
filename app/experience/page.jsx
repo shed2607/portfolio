@@ -19,42 +19,16 @@ export default function Experience() {
           </div>
         </div>
         <h2 className="text-2xl font-medium mb-10">Work:</h2>
-        <div className="flex mb-10">
-          <div className="flex flex-col mr-5">
-            <h3 className="text-l font-medium text-gray-500">
-              01/2022 - Present
-            </h3>
-          </div>
-          <div className="flex flex-col">
-            <h3 className="text-xl font-bold">Freelance</h3>
-            <h3 className="text-l text-gray-500">Full-stack developer</h3>
-            <ul>
-              <li className="text-l list-disc">
-                Developed cross-platform mobile apps with Flutter and React
-                Native.
-              </li>
-              <li className="text-l list-disc">
-                Implemented backend solutions using Firebase.
-              </li>
-              <li className="text-l list-disc">
-                Conducted thorough testing for app store compliance.
-              </li>
-              <li className="text-l list-disc">
-                Ensured apps remained up-to-date with the latest features and
-                improvements.
-              </li>
-            </ul>
-          </div>
-        </div>
+        
 
         <div className="flex mb-10">
           <div className="flex flex-col mr-5">
             <h3 className="text-l font-medium text-gray-500">
-              01/2022 - Present
+              01/2023 - Present
             </h3>
           </div>
           <div className="flex flex-col">
-            <h3 className="text-xl font-bold">Cozsa Technologies</h3>
+            <h3 className="text-xl font-bold">Cozsa Technologies(on contract)</h3>
             <h3 className="text-l text-gray-500">Full-stack developer</h3>
             <ul>
               <li className="text-l list-disc">
@@ -82,7 +56,7 @@ export default function Experience() {
             </h3>
           </div>
           <div className="flex flex-col">
-            <h3 className="text-xl font-bold">Epsilon Development Labs</h3>
+            <h3 className="text-xl font-bold">Epsilon Development Labs(on contract)</h3>
             <h3 className="text-l  text-gray-500">Mobile developer</h3>
             <ul>
               <li className="text-l list-disc">
