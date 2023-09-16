@@ -10,7 +10,7 @@ export default function Medium() {
   return (
     <div className="flex flex-col lg:flex-row mx-16">
       <>
-        <header className=" top-0 flex  w-1/2 flex-col justify-between ">
+        <header className=" top-0 flex flex-col justify-between ">
           <div className="flex">
             <div>
               <h1 className="text-3xl font-bold mb-5">
