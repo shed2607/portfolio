@@ -1,0 +1,26 @@
+.navlink {
+  cursor: pointer;
+  @apply flex items-center pb-2 mb-4;
+}
+
+
+.line{
+    background-color: #63738B;
+    @apply mr-2 h-px w-8  transition-all group-hover:w-16 motion-reduce:transition-none;
+}
+
+.text{
+    @apply text-lg font-medium group-hover:text-xl group-hover:font-bold;
+}
+
+.active-link .line{
+
+  background-color: #E2E8F0;
+    @apply w-16;
+}
+
+.active-link .text{
+
+  color: #E2E8F0;
+    @apply text-xl font-bold;
+}

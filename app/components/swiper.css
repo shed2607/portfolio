@@ -1,0 +1,3 @@
+.swiper-container {
+  @apply flex items-center p-5 bg-white  rounded-2xl; /* Horizontal gradient from deeppurple to white */
+}
