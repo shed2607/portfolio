@@ -14,7 +14,7 @@ export default function Small() {
           <div className="flex">
             <div>
               <h1 className="text-3xl font-bold mb-5">
-                Hi there, I'm Oluwaseun
+                Hi there, Oluwaseun
               </h1>
               <h2 className="text-xl mb-3">Full-stack developer.</h2>
             </div>
