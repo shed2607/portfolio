@@ -76,11 +76,6 @@ export default function BigFooter() {
           </svg>
           <span className="ml-2">+234 906 434 5262</span>
         </div>
-        <footer>
-          <p className="my-10">
-            Copyright © 2023 by Oluwaseun Adeniyi. All rights reserved.
-          </p>
-        </footer>
       </>
     </div>
   );
