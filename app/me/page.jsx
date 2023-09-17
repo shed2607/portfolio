@@ -12,7 +12,7 @@ export default function Me() {
             alt="Picture of the author"
             width={300}
             height={300}
-            className="rounded-full border-4  mx-11 hover:border-8"
+            className="rounded-full border-4  "
           />
         
       </section>
