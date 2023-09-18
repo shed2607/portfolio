@@ -31,10 +31,10 @@ export default function Large() {
           <Skills />
           <Projects />
           <footer>
-          <p className="my-10">
-            Copyright © 2023 by Oluwaseun Adeniyi. All rights reserved.
-          </p>
-        </footer>
+            <p className="my-10">
+              Copyright © 2023 by Oluwaseun Adeniyi. All rights reserved.
+            </p>
+          </footer>
         </main>
       </>
     </div>
