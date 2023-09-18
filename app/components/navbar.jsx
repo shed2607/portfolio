@@ -42,7 +42,7 @@ export default function NavBar() {
         
         <li>
           <a
-            href="https://oluwaseun-a-resume.tiiny.site/"
+            href="https://oluwaseun-ao-resume.tiiny.site"
             target="_blank"
             download={true}
             className="navlink group"

@@ -52,7 +52,7 @@ export default function MediumFooter() {
           </li>
           <li>
             <a
-              href="https://oluwaseun-a-resume.tiiny.site/"
+              href="https://oluwaseun-ao-resume.tiiny.site"
               target="_blank"
               download={true}
               className="group flex items-center pb-2 mb-4"
