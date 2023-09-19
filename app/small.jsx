@@ -4,11 +4,10 @@ import Projects from "./projects/page";
 import Footer from "./components/footer";
 import Skills from "./skills/page";
 import Me from "./me/page";
-import Experience from "./experience/page";
 
 export default function Small() {
   return (
-    <div className="flex flex-col lg:flex-row mx-8">
+    <div className="flex flex-col lg:flex-row mx-8 mt-5">
       <>
         <header className=" top-0 flex flex-col justify-between ">
           <div className="flex items-center">
@@ -23,7 +22,6 @@ export default function Small() {
         <main className="w-full ">
           <Me />
           <About />
-          <Experience />
           <Skills />
           <Projects />
         </main>

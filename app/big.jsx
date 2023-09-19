@@ -5,7 +5,6 @@ import Footer from "./components/footer";
 import NavBar from "./components/navbar";
 import Skills from "./skills/page";
 import Me from "./me/page";
-import Experience from "./experience/page";
 
 export default function Large() {
   return (
@@ -24,10 +23,9 @@ export default function Large() {
             <Footer />
           </div>
         </header>
-        <main className="w-full lg:w-1/2">
+        <main className="w-full lg:w-1/2 ">
           <Me />
           <About />
-          <Experience />
           <Skills />
           <Projects />
           <footer>

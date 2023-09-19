@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <main  id="projects" >
       {" "}
-      <section className="flex flex-col pt-5 h-screen">
+      <section className="flex flex-col pt-5 mb-96">
       <h1 className="text-3xl font-bold">.Projects</h1>
         <div className="container mx-auto">
           <SwiperFunc />

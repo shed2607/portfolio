@@ -23,6 +23,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-cards";
 
 import { getScreenSize } from "../functions/screenutils";
+import Popup from "reactjs-popup";
 
 export default function SwiperFunc() {
   const [screenSize, setScreenSize] = useState(false);
@@ -48,7 +49,7 @@ export default function SwiperFunc() {
               />
               <div className="flex flex-col items-center">
                 <h1 className="pb-16 text-center text-5xl text-gray-500 font-bold">
-                  {slide.title} <span className="text-teal-300 ml-5">.</span>
+                  {slide.title}<span className="text-teal-300 ml-5">.</span>
                 </h1>
                 <p className="flex-1 px-5 text-xl text-gray-500 ">
                   {slide.description}
@@ -62,19 +63,24 @@ export default function SwiperFunc() {
             </div>
           ) : (
             <div className="flex flex-col items-center p-5 bg-white  rounded-2xl">
-              <Image
-                src={slide.images.light}
-                alt="Picture of the author"
-                width={200}
-                className="rounded-2xl border-4 border-black"
-              />
               <div className="flex flex-col items-center">
-                <h1 className="pb-16 text-center text-5xl text-gray-500 font-bold">
-                  {slide.title} <span className="text-teal-300 ml-5">.</span>
+                <h1 className="pb-5 text-center text-4xl text-gray-500 font-semibold">
+                  {slide.title} <span className="text-teal-300 ml-1">.</span>
                 </h1>
                 <p className="flex-1 px-5 text-xl text-gray-500 ">
                   {slide.description}
                 </p>
+                <Popup
+                  trigger={<button className="text-gray-400 underline mt-2"> Click to show quick image </button>}
+                  position="center"
+                >
+                  <Image
+                    src={slide.images.light}
+                    alt="Picture of the author"
+                    width={200}
+                    className="rounded-2xl border-4 border-black"
+                  />
+                </Popup>
                 <a href={slide.link} target="_blank">
                   <button className="bg-black hover:bg-gray-700 text-white font-bold py-3 px-4 mt-5 rounded-2xl">
                     View Project

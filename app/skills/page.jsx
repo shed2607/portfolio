@@ -1,39 +1,31 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function Skills() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const skills = [
+    { name: ".Flutter", left: "10%", top: "20%" },
+    { name: ".React Native", left: "40%", top: "40%" }, // Increased space to 40%
+    { name: ".Next.js", left: "70%", top: "60%" }, // Increased space to 70%
+    { name: ".Nuxt.js", left: "100%", top: "80%" }, // Increased space to 100%
+    { name: ".Firebase", left: "10%", top: "70%" },
+    { name: ".Supabase", left: "40%", top: "50%" },
+    { name: ".MongoDB", left: "70%", top: "30%" }, // Increased space to 70%
+    { name: ".Postman", left: "100%", top: "10%" }, // Increased space to 100%
+  ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 1015); // Adjust the breakpoint as needed
-    };
-
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <main id="skills">
       <section className="content">
-        <h1 className="text-3xl font-bold mb-14">.Skills</h1>
-        <div className="flex max-w-max">
-          <ul className="mx-10">
-            <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.Flutter</li>
-            <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.React Native</li>
-            <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.Next.js</li>
-            <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.Nuxt.js</li>
-            
-          </ul>
-          <ul className="mx-10">
-          <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.Firebase</li>
-            <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.Node.js</li>
-            <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.MongoDB</li>
-            <li className="border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5">.Postman</li>
-          </ul>
+        <h1 className="text-3xl font-bold mb-14">🚀 Skills</h1>
+        <div className="relative max-w-max">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="relative border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5"
+              style={{ left: skill.left, top: skill.top }}
+            >
+              {skill.name}
+            </div>
+          ))}
         </div>
       </section>
     </main>

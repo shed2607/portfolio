@@ -6,7 +6,7 @@ import Picture2 from "./pic2.jpg";
 export default function Me() {
   return (
     <main id="me">
-      <section className="flex justify-center pt-5">
+      <section className="flex justify-center pt-10">
       <Image
             src={Picture2}
             alt="Picture of the author"

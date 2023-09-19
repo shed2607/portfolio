@@ -4,7 +4,6 @@ import Projects from "./projects/page";
 import Footer from "./components/footer";
 import Skills from "./skills/page";
 import Me from "./me/page";
-import Experience from "./experience/page";
 
 export default function Medium() {
   return (
@@ -23,7 +22,6 @@ export default function Medium() {
         <main className="w-full ">
           <Me />
           <About />
-          <Experience />
           <Skills />
           <Projects />
         </main>
