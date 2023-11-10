@@ -4,6 +4,7 @@ import Loginui1 from "../assets/images/loginui1.png";
 import MenuImg1 from "../assets/images/menu1.png";
 import Ticklight from "../assets/images/ticlight.png";
 import Knowurkwh from "../assets/images/knowurkwh.png";
+import B2B from "../assets/images/b2b.png";
 
 const slidesData = [
   {
@@ -56,6 +57,15 @@ const slidesData = [
     },
     link: "https://knowurkwh.vercel.app/",
   },
+  {
+    id: 6,
+    title: "B2B App",
+    description:
+      "Discover a B2B app designed to help you manage your business with ease. Seamlessly integrated with Supabase for enhanced functionality, this app is the perfect tool for your business needs.",
+    images: {
+      light: B2B,
+    },
+    link: "https://sample-landing-page-three.vercel.app/",}
 ];
 
 export default slidesData;

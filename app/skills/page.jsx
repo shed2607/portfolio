@@ -2,32 +2,45 @@ import React from "react";
 
 export default function Skills() {
   const skills = [
-    { name: ".Flutter", left: "10%", top: "20%" },
-    { name: ".React Native", left: "40%", top: "40%" }, // Increased space to 40%
-    { name: ".Next.js", left: "70%", top: "60%" }, // Increased space to 70%
-    { name: ".Nuxt.js", left: "100%", top: "80%" }, // Increased space to 100%
-    { name: ".Firebase", left: "10%", top: "70%" },
-    { name: ".Supabase", left: "40%", top: "50%" },
-    { name: ".MongoDB", left: "70%", top: "30%" }, // Increased space to 70%
-    { name: ".Postman", left: "100%", top: "10%" }, // Increased space to 100%
+    { name: ".Flutter" },
+    { name: ".React Native" }, 
+    { name: ".Next.js" }, 
+    { name: ".Nuxt.js" }, 
+    { name: ".Firebase" },
+    { name: ".Supabase" },
+    { name: ".MongoDB" }, 
+    { name: ".Postman" }, 
+    { name: ".Node.js" },
   ];
 
   return (
     <main id="skills">
       <section className="content">
         <h1 className="text-3xl font-bold mb-14">🚀 Skills</h1>
-        <div className="relative max-w-max">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="relative border-4 rounded-xl p-1 border-white bg-white text-gray-700 mb-5"
-              style={{ left: skill.left, top: skill.top }}
-            >
-              {skill.name}
-            </div>
-          ))}
+        <div >
+          <Skill posts={skills} />
         </div>
       </section>
     </main>
   );
 }
+
+const Skill = ({ posts }) => {
+  return (
+    <div className="flex flex-wrap w-full">
+      {posts.map((post) => (
+        <div
+          key={post.id}
+          className="flex max-w-xl flex-col bg-gray-400 mx-10 my-5 p-2 rounded-xl items-center"
+        >
+          <div className="group relative">
+            <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+              <span className="absolute inset-0" />
+              {post.name}
+            </h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
